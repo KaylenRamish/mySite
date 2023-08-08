@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- The above line includes an external CSS file named 'style.css' -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1 class="site-title">My Blog</h1>
+            <!-- The heading that displays the title of the blog -->
+            <nav class="site-navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <!-- The link to the home page -->
+                    <li><a href="/about">About</a></li>
+                    <!-- The link to the about page -->
+                    <li><a href="/contact">Contact</a></li>
+                    <!-- The link to the contact page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        {% block content %}
+        <!-- This is a placeholder for the content of each specific page -->
+        {% endblock %}
+        <!-- End of the content block -->
+
+        <div class="blog-posts">
+            <h2>Blog Post 1</h2>
+            <p>
+                This is the content of Blog Post 1.
+            </p>
+        </div>
+
+        <div class="blog-posts">
+            <h2>Blog Post 2</h2>
+            <p>
+                This is the content of Blog Post 2.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
